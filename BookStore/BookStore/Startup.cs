@@ -65,7 +65,10 @@ namespace BookStore
             {
                 endpoints.MapGet("/alex", async context =>
                 {
-                    await context.Response.WriteAsync("Hello from Alex! ");
+                    if (env.IsDevelopment()) await context.Response.WriteAsync("Hello from Dev! "); 
+                    else if (env.IsStaging()) await context.Response.WriteAsync("Hello from stag! ");
+                    else if (env.IsProduction()) await context.Response.WriteAsync("Hello from prod! ");
+                    else await context.Response.WriteAsync("Bye ");
                 });
             });
         }
