@@ -1,0 +1,7 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/BookStore/BookStore/bin/Debug/netcoreapp3.1
+/BookStore/.vs/BookStore
+/BookStore/BookStore/obj
